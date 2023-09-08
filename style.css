@@ -10,6 +10,10 @@ h1 {
 color: black;
 }
 
+p{
+    color: violet;
+}
+
 #contenedor{
     width: 900px;
     height: 500px;
@@ -33,7 +37,7 @@ color: black;
 }
 
 #detalle{
-    background: #FF416C;
+    background: violet;
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
     width: 50%;
     height: 100%;
@@ -58,12 +62,13 @@ input {
 }
 
 button {
+    margin: 30px;
   font-size: 15px;
 	font-weight: bold;
 	padding: 12px 45px;
 	border-radius: 30px;
-	background-color: #FF416C;
-	border: 1px solid #FF416C;
+	background-color: violet;
+	border: 1px solid violet;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -71,7 +76,7 @@ button {
 }
 
 button:active {
-	transform: scale(0.95);
+	transform: scale(0.80);
 }
 
 #error{
@@ -81,7 +86,7 @@ button:active {
 }
 
 .resultado{
-    color: #0A81D1;
+    color: #72aed6;
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 5px;
