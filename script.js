@@ -18,7 +18,7 @@ function calcFlujo(peso){
         flujo += aux*2;
         resto -= aux;
     }
-    flujo += resto*4;
+    flujo += resto*4.1;
     return flujo;
 }
 
@@ -26,7 +26,7 @@ CALCULAR.addEventListener('click' , () => {
     const DATO = document.getElementById('peso').value;
     console.log('dato ingresado: ', DATO);
 
-    if (DATO > 0){
+    if (DATO > 0 && DATO <= 30){
         ERROR.style.display = 'none';
         let flujo = calcFlujo(DATO);
         let mantenimiento = flujo*1.5;
@@ -34,7 +34,16 @@ CALCULAR.addEventListener('click' , () => {
         MAN.innerHTML = 'm+m/2' + mantenimiento + 'cc/hr';
         FLU.style.display = 'block';
         MAN.style.display = 'block';
-    }else {
+
+    }else if (DATO > 30) {
+        ERROR.style.display = 'none';
+        let flujo = ( (DATO * 4) + 7 ) / (DATO + 90);
+        FLU.innerHTML = flujo * 1500 + 'cc/hr';
+        MAN.innerHTML = flujo * 2000 + 'cc/hr';
+        FLU.style.display = 'block';
+        MAN.style.display = 'block';
+    }
+    else{
         ERROR.style.display = 'block';
         FLU.style.display = 'none';
         MAN.style.display = 'none';
